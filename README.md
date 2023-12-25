@@ -10,9 +10,9 @@ Official code for "Complementary Experts for Long-tailed Semi-Supervised Learnin
 ## Introduction
 This repo is based on the public and widely-used codebase [USB](https://github.com/microsoft/Semi-supervised-learning).
 
-What I've done is just adding our CPE algorithm in `semilearn/imb_algorithms/cpe`, plus some baseline algorithms which are missing USB, such as [RDA](https://github.com/NJUyued/RDA4RobustSSL) and [ACR](https://github.com/Gank0078/ACR).
+What I've done is just adding our CPE algorithm in `semilearn/imb_algorithms/cpe`, plus some baseline algorithms which are missing in USB, such as [RDA](https://github.com/NJUyued/RDA4RobustSSL) and [ACR](https://github.com/Gank0078/ACR).
 
-Also, I've made corresponding modifications to `semilearn/nets/` and several `__init__.py`
+Also, I've made corresponding modifications to `semilearn/nets/` and several `__init__.py`.
 
 ## How to run
 For example, on CIFAR-10-LT with $\gamma_l=\gamma_u=100$
@@ -21,7 +21,7 @@ For example, on CIFAR-10-LT with $\gamma_l=\gamma_u=100$
 CUDA_VISIBLE_DEVICES=0 python train.py --c config/classic_cv_imb/fixmatch_cpe/fixmatch_cpe_cifar10_lb1500_100_ulb3000_100_0_2_4_0.yaml
 `
 
-(Note: I know that USB supports multi-GPUs, but I still recommend you to run on single GPU, as some weird problems will appear.)
+(Note: I know that USB supports multi-GPUs, but I still recommend you to run on single GPU, as some weird problems may occur.)
 
 The model will be automatically evaluated every 1024 iterations during training. After training, the last two lines in `saved_models/classic_cv_imb/fixmatch_cpe_cifar10_lb1500_100_ulb3000_100_0_2_4_0/log.txt` will tell you the best accuracy. 
 
@@ -33,11 +33,16 @@ For example,
 ```
 
 ## Results
+![image](https://github.com/machengcheng2016/CPE-LTSSL/assets/22851860/efce09a9-a951-447a-87c5-75136a7a59b7)
+
+![image](https://github.com/machengcheng2016/CPE-LTSSL/assets/22851860/225b0e9e-cbb2-45b3-a2d7-a2e23ff554ea)
+
+
 I've put all the `log.txt` on the CIFAR-10-LT dataset in `saved_models`. Please take a look. 
 
-A few training process were killed halfway by me. But you can still check the `BEST_EVAL_ACC` in the last line of `log.txt`. I promise they are real.
+Note that a few training process were killed halfway by me. But you can still check the `BEST_EVAL_ACC` in their `log.txt`. I promise they are real.
 
-The reported accuracies in Table 1 and 2 in our AAAI paper are the average over three different runs (random seeds are 0/1/2).
+The reported accuracies in Table 2 and 3 in our AAAI paper are the average over three different runs (random seeds are 0/1/2).
 
 ## Contact
 Feel free to contact me via machengcheng2016@gmail.com if you have any problems about our paper or codes.
