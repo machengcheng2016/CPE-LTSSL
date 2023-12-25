@@ -38,11 +38,11 @@ For example,
 ![image](https://github.com/machengcheng2016/CPE-LTSSL/assets/22851860/225b0e9e-cbb2-45b3-a2d7-a2e23ff554ea)
 
 
-I've put all the `log.txt` on the CIFAR-10-LT dataset in `saved_models`. Please take a look. 
+I've put all the `log.txt` on the CIFAR-10-LT dataset in `saved_models`. Please take a look. I also put them on Google Drive ([link](https://drive.google.com/drive/folders/1J2npoQqSkenMUiKHtlhWKJmSOn0K0Hib?usp=sharing)).
 
 Note that a few training process were killed halfway by me. But you can still check the `BEST_EVAL_ACC` in their `log.txt`. I promise they are real.
 
-The reported accuracies in Table 2 and 3 in our AAAI paper are the average over three different runs (random seeds are 0/1/2).
+The reported accuracies in Table 2 and 3 in our AAAI paper are the average over three different runs (random seeds are 0/1/2). I wrote a tiny [script](https://github.com/machengcheng2016/CPE-LTSSL/blob/main/saved_models/classic_cv_imb/compute_mean_std.py) to realize quick observation and computation.
 
 ## Contact
 Feel free to contact me via machengcheng2016@gmail.com if you have any problems about our paper or codes.
