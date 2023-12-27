@@ -44,5 +44,19 @@ Note that a few training process were killed halfway by me. But you can still ch
 
 The reported accuracies in Table 2 and 3 in our AAAI paper are the average over three different runs (random seeds are 0/1/2). I wrote a tiny [script](https://github.com/machengcheng2016/CPE-LTSSL/blob/main/saved_models/classic_cv_imb/compute_mean_std.py) to realize quick observation and computation.
 
+
+## Citation
+If you find this work useful, please consider citing our paper. We provide a BibTeX entry of our paper below:
+```
+@misc{ma2023heads,
+      title={Three Heads Are Better Than One: Complementary Experts for Long-Tailed Semi-supervised Learning}, 
+      author={Chengcheng Ma and Ismail Elezi and Jiankang Deng and Weiming Dong and Changsheng Xu},
+      year={2023},
+      eprint={2312.15702},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
 ## Contact
 Feel free to contact me via machengcheng2016@gmail.com if you have any problems about our paper or codes.
